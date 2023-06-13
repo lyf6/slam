@@ -74,8 +74,8 @@ void QR_solve(Eigen::MatrixXf &A, Eigen::VectorXf &b)
     std::tie(Q, R) = QR_Householder(A);
     R = R.inverse();
     x = R * Q.transpose() * b;
-    LOG(INFO) << x;
-    LOG(INFO) << A * x;
+    LOG(INFO) << "the x solved by QR_solve is: " << x;
+    // LOG(INFO) << A * x;
 }
 void Cholesky_solve(Eigen::MatrixXf &A, Eigen::VectorXf &b)
 {
@@ -83,6 +83,6 @@ void Cholesky_solve(Eigen::MatrixXf &A, Eigen::VectorXf &b)
     Eigen::VectorXf x = Eigen::VectorXf::Zero(cols);
     Eigen::MatrixXf g = Cholesky(A).inverse();
     x = g.transpose() * g * b;
-    LOG(INFO) << x;
-    LOG(INFO) << A * x;
+    LOG(INFO) << "the x solved by Cholesky_solve is: " << x;
+    // LOG(INFO) << A * x;
 }
