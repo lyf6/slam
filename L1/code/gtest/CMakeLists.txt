@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+PROJECT(test)
+find_package(GTest REQUIRED)
+include_directories(${GTest_INCLUDE_DIR})
+# set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/src)
+#添加测试用例
+INCLUDE_DIRECTORIES(${HELLO_INCLUDE_DIR})
+message(STATUS "GTEST_INCLUDE_DIR is " ${GTest_INCLUDE_DIR})
+add_executable(test_add test.cpp)
+target_link_libraries(test_add GTest::gtest_main src::hello)
+add_test(NAME test_add COMMAND test_add)
+include(GoogleTest)
+gtest_discover_tests(test_add)

@@ -1,0 +1,5 @@
+if(EXISTS "/home/yf/Documents/slam/L1/code/build/bin/gtest/test_add[1]_tests.cmake")
+  include("/home/yf/Documents/slam/L1/code/build/bin/gtest/test_add[1]_tests.cmake")
+else()
+  add_test(test_add_NOT_BUILT test_add_NOT_BUILT)
+endif()

@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/home/yf/Documents/slam/build",
+  "command": "/usr/bin/g++  -DGFLAGS_IS_A_DLL=0 -I/usr/local/include/eigen3 -I/home/yf/Documents/slam/L2/include  -g   -o src/CMakeFiles/main.dir/useEigen.cpp.o -c /home/yf/Documents/slam/L2/src/useEigen.cpp",
+  "file": "/home/yf/Documents/slam/L2/src/useEigen.cpp"
+},
+
+{
+  "directory": "/home/yf/Documents/slam/build",
+  "command": "/usr/bin/g++  -DGFLAGS_IS_A_DLL=0 -I/usr/local/include/eigen3 -I/home/yf/Documents/slam/L2/include  -g   -o src/CMakeFiles/main.dir/utils.cpp.o -c /home/yf/Documents/slam/L2/src/utils.cpp",
+  "file": "/home/yf/Documents/slam/L2/src/utils.cpp"
+}
+]

@@ -1,0 +1,13 @@
+# PROJECT(HELLO)
+SET(SRC_LIST useHello.cpp)
+
+find_package(HELLO)
+
+if(HELLO_FOUND)
+  add_executable(sayhello useHello.cpp)
+  include_directories(${HELLO_INCLUDE_DIR})
+  target_link_libraries(sayhello ${HELLO_LIBRARY})
+else(HELLO_FOUND)
+  message(FATAL_ERROR "HELLO library not found")
+endif(HELLO_FOUND)
+
